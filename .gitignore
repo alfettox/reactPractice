@@ -1,0 +1,46 @@
+# Ignore Node.js related files and folders
+**/node_modules/
+npm-debug.log
+
+# Ignore compiled output
+**/build/
+**/dist/
+
+# Ignore environment-specific files
+**/.env.local
+**/.env.development
+**/.env.test
+**/.env.production
+**/.env.*
+
+# Ignore editor-specific files
+.idea/
+.vscode/
+*.swp
+
+# Ignore package-lock files
+package-lock.json
+
+# Ignore log files
+*.log
+
+# Ignore build artifacts
+*.log
+*.log*
+*.pid
+*.seed
+*.pid.lock
+*.log
+*.log*
+*.seed
+*.pid
+*.pid.lock
+
+# Ignore .DS_Store files (macOS)
+.DS_Store
+
+# Ignore .idea folder (PyCharm)
+.idea/
+
+# Ignore Visual Studio Code folder
+.vscode/
