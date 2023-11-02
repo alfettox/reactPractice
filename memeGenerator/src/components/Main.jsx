@@ -4,7 +4,6 @@ import memesData from "../memesData.js"
 
 /*
    PROPS: properties passed into a component as parameters in a function, the component cant modify them
-
    STATE: defined within the component and are managed by the component 
 */
 
