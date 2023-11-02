@@ -1,0 +1,63 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background: linear-gradient(90deg, #123123 1.18%, #156847 100%);
+  color: white;
+  padding: 20px;
+}
+
+.header--image {
+  height: 15em;
+  margin-right: 6px;
+}
+
+.header--title {
+  font-size: 1.25;
+  margin-right: auto;
+    font-family: 'Playpen Sans', cursive;
+
+}
+
+.header--project {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/** MAIN **/
+
+.main--container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main--image {
+  height: 35em;
+  margin-right: 6px;
+}
+
+.main--form{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main--form button{
+  width:20em;
+  padding: 10px;
+  margin:2em
+}
