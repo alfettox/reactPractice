@@ -1,0 +1,23 @@
+.card{
+    display:flex;
+    flex-direction:column;
+    height:auto;
+    width:30vw;
+    background-color: red;
+    border-radius: 1em;
+    color:white;
+    padding:1em;
+    margin:1em;
+    box-shadow: 1em 1em 1em rgba(0,0,0,0.2);
+    border: solid 4px white;
+}
+
+.card-top{
+    display:flex;
+    flex-direction: row;
+    gap:1em
+}
+
+.card img{
+    height:auto;
+}

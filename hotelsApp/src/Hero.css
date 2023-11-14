@@ -8,8 +8,10 @@
     text-align: center;
   }
   
-  carousel--img {
-    width: 100%;
-    height: auto; 
+  .carousel--img {
+    height: 40vw;
+    border-radius:100%;
+    border: solid .5em white;
+    margin:0.5em;
   }
   

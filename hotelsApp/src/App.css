@@ -18,6 +18,7 @@ navbar {
   width: 100vw;
   flex-direction: row;
   justify-content: center;
+  box-shadow: 0 .2em 20em 20em #f2c057;
 }
 
 navbar > ul {
@@ -35,4 +36,12 @@ navbar > ul > li {
 navbar > ul > li:hover {
   text-shadow: 0 0 2em #1f1f1f;
   transform: translate(0, -.1em);
+}
+
+.card-container{
+  margin:2em;
+  background-color: white;
+  border:solid 3px white;
+  display: flex;
+  flex-direction: row;
 }
