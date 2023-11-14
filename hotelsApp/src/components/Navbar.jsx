@@ -1,5 +1,5 @@
 import logo from '../assets/logoHotelApp_mini.png'
-import '../App.css'
+import '../style/App.css'
 export default function Navbar() {
     return (
         <navbar>
