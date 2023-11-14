@@ -1,0 +1,15 @@
+
+.slick-slider {
+    width: 80%; 
+    margin: 0 auto;
+  }
+  
+  .slick-slide {
+    text-align: center;
+  }
+  
+  carousel--img {
+    width: 100%;
+    height: auto; 
+  }
+  
