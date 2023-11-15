@@ -11,9 +11,9 @@ body {
   max-width: 100px;
 }
 
-navbar {
+.navbar {
   background-color: #fefaf2;
-  height: 10em;
+  height: 7em;
   display: flex;
   color: #be1f20;
   width: 100vw;
@@ -22,19 +22,19 @@ navbar {
   box-shadow: 0 0.2em 20em 20em #f2c057;
 }
 
-navbar > ul {
+.navbar > ul {
   display: flex;
   align-items: center;
   gap: 5em;
 }
 
-navbar > ul > li {
+.navbar > ul > li {
   list-style: none;
-  font-size: 2em;
+  font-size: 1.5em;
   transition: transform 0.3s ease-in-out;
 }
 
-navbar > ul > li:hover {
+.navbar > ul > li:hover {
   text-shadow: 0 0 2em #1f1f1f;
   transform: translate(0, -0.1em);
 }
@@ -45,8 +45,8 @@ navbar > ul > li:hover {
   border: 3px solid #ccc;
   border-radius: .7em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
-  gap: 1em; 
+  grid-template-columns: repeat(auto-fill, minmax(15vw, 30vw));
+  gap: .3em; 
   padding: 1em;
 }
 
@@ -57,4 +57,14 @@ navbar > ul > li:hover {
   justify-content: center;
   font-style: italic;
   margin-top: 2em;
+}
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }

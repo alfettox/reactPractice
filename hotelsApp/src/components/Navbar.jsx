@@ -1,16 +1,17 @@
-import logo from '../assets/logoHotelApp_mini.png'
-import '../style/App.css'
+import logo from '../assets/logoHotelApp_mini.png';
+import '../style/App.css';
+
 export default function Navbar() {
     return (
-        <navbar>
+        <div className="navbar">
             <img src={logo} alt="Hotel App Logo" />
-            <h1> HotelApp!</h1>
+            <h1>HotelApp!</h1>
             <ul>
                 <li>Home</li>
                 <li>Bedrooms</li>
                 <li>Reservations</li>
                 <li>Login</li>
             </ul>
-       </navbar>
-    )
+       </div>
+    );
 }

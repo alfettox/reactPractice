@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+// App.jsx
+
+import React, { useState, useEffect } from 'react';
 import './style/App.css';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
@@ -7,35 +9,68 @@ import cardsData from './data/cardsData.js';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
-  const now = new Date();
-  const date = new Date(now);
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
 
-  let hoursLeft = 24 - hours;
-  let minutesLeft = 60 - minutes;
-  let secondsLeft = 60 - seconds;
+      const hoursLeft = 24 - hours;
+      const minutesLeft = 60 - minutes;
+      const secondsLeft = 60 - seconds;
+
+      setTimeLeft({
+        hours: hoursLeft,
+        minutes: minutesLeft,
+        seconds: secondsLeft,
+      });
+    };
+
+    calculateTimeLeft();
+
+    const intervalId = setInterval(() => {
+      setTimeLeft((prevTimeLeft) => {
+        let seconds = prevTimeLeft.seconds - 1;
+        let minutes = prevTimeLeft.minutes;
+        let hours = prevTimeLeft.hours;
+
+        if (seconds < 0) {
+          seconds = 59;
+          minutes -= 1;
+        }
+
+        if (minutes < 0) {
+          minutes = 59;
+          hours -= 1;
+        }
+
+        return {
+          hours: hours,
+          minutes: minutes,
+          seconds: seconds,
+        };
+      });
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <>
       <Navbar />
       <Hero />
-      <h3 className="promo"> -25% Time left before the offer ends: {hoursLeft}H : {minutesLeft}m : {secondsLeft}s</h3>
+      <h3 className="promo">
+        -25% Time left before the offer ends: {timeLeft.hours}H : {timeLeft.minutes}m : {timeLeft.seconds}s
+      </h3>
 
-      <div id="cardContainer" className="card-container">
-        {cardsData.map((card, index) => (
+      <div className="card-container">
+        {cardsData.map((item) => (
           <Card
-            key={index}
-            image={card.image}
-            starred={card.starred}
-            name={card.name}
-            description={card.description}
-            review={card.review}
-            phone={card.phone}
-            email={card.email}
-            price={card.price}
+            key ={item.id}
+            {...item}
           />
         ))}
       </div>

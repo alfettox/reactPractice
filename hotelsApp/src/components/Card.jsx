@@ -2,27 +2,32 @@ import React from 'react';
 import '../style/Card.css';
 import starfilled from '../assets/star-filled.svg';
 import starempty from '../assets/star.svg';
-import phoneicon from '../assets/phone.svg';
-import emailicon from '../assets/email.svg';
 
-export default function Card({ image, starred, name, description, review, phone, email, price }) {
+const Card = ({ name, description, review, phone, email, price, location, availability, starred, image }) => {
+  let badgeText = availability ? "SOLD OUT" : "AVAILABLE";
+
+  const ReviewStars = ({ review }) => {
+    return <div>Review: {Array(review).fill('★').join('')}</div>;
+  };
+
   return (
     <div className="card">
-      <div className="card-top">
+      {badgeText && <div className="card--badge">{badgeText}</div>}
+      <div className="fav-div">
         {starred ? <img src={starfilled} width="30px" alt="Star Icon" /> : <img src={starempty} width="30px" alt="Star Icon" />}
-        <h1>{name}</h1>
       </div>
-      <img src={image} alt="Room image" />
-      <p>{description}</p>
-      <div>
-        <h4>Review {review} / 5</h4>
-        <h3>{price}$</h3>
-      </div>
-      <div className="contacts">
-        <div>
-          <img src={phoneicon} width="12px" /> {phone}</div>
-        <div> <img src={emailicon} width="12px" /> {email}</div>
+      <img src={image} alt={name} loading="lazy" />
+      <div className="card-details">
+        <h2>{name}</h2>
+        <p>{description}</p>
+        <ReviewStars review={review} />
+        <p>Phone: {phone}</p>
+        <p>Email: {email}</p>
+        <p>Price: ${price}</p>
+        <p>Location: {location}</p>
       </div>
     </div>
   );
-}
+};
+
+export default Card;
