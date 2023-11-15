@@ -1,0 +1,32 @@
+form{
+    display:grid;
+    grid-template: 50px 50px / 1fr 1fr
+    gap: 17px;
+}
+
+
+input{
+    margin:1em;
+
+
+}
+button {
+    width: 100px;
+    height: 80px;
+    grid-column: 1 / -1;
+    font-family: "Karla", sans-serif;
+    background-color: lightgreen;
+    margin: 1em;
+    color: black;
+    transition: transform 13s ease;
+    border: none; 
+}
+
+button:hover {
+    border: 2px solid white; 
+    font-weight: bold;
+}
+
+.meme--image{
+    width:100%;
+}
