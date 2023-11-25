@@ -1,42 +1,35 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+html, body {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.logo {
-  height: 25em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 3em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  font-size: 1.2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.form--block {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap:1em;
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
+.text--fields{
+  display: flex;
+  flex-direction: column;
+  gap:1em;
 }
