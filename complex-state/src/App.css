@@ -1,0 +1,15 @@
+.App{
+  font-size:3em;
+}
+
+
+button{
+  width:10em;
+  height:10em;
+  border-radius:50%;
+}
+
+.array-item {
+  color: red;
+  transform: translateX(15px);
+}
