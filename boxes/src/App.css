@@ -1,0 +1,19 @@
+/* App.css */
+
+.App {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+
+  .container{
+    display:flex;
+    justify-content: center;
+  }
