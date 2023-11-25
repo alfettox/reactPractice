@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #57b3cc, #006799);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height:50vh;
+  box-shadow: 0px 0px 5px 3px rgba(255,255,255, 0.44);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(255,255,255, 0.44);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(255,255,255, 0.44);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin:.7em;
+  padding:1em;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.card--image {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: solid 3px white;
+  margin: 1em;
+  color: white;
+}
+
+.card--name {
+  margin-block: 13px;
+}
+
+.card--info {
+  padding: 10px;
+}
+
+.card--favorite {
+  width: 80px;
+  cursor: pointer;
+}
+
+.card--favorite.on {
+  filter: drop-shadow(0px 0px 20px rgba(255,255,255,.5));
+}
+
+.card--contact {
+  font-size: 0.75rem;
+  margin-block: 7px;
+}
